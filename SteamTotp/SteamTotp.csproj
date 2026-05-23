@@ -15,8 +15,8 @@
     <Company>candelacode</Company>
     <Description>Generate Steam-style TOTP authentication codes. Supports Steam Guard codes, confirmation keys, device ID generation, and server time synchronization.</Description>
     <Copyright>Copyright (c) 2025 candelacode</Copyright>
-    <PackageProjectUrl>https://github.com/candelacode/steam-totp</PackageProjectUrl>
-    <RepositoryUrl>https://github.com/candelacode/steam-totp</RepositoryUrl>
+    <PackageProjectUrl>https://github.com/candelacode/steam-totp-net</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/candelacode/steam-totp-net</RepositoryUrl>
     <RepositoryType>git</RepositoryType>
     <PackageTags>steam;totp;steam-guard;authenticator;2fa;steam-totp;steamguard</PackageTags>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
