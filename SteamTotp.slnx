@@ -1,0 +1,6 @@
+<Solution>
+  <Project Path="SteamTotp.Console.SteamKit2/SteamTotp.Console.SteamKit2.csproj" />
+  <Project Path="SteamTotp.Console/SteamTotp.Console.csproj" />
+  <Project Path="SteamTotp.Tests/SteamTotp.Tests.csproj" />
+  <Project Path="SteamTotp/SteamTotp.csproj" />
+</Solution>

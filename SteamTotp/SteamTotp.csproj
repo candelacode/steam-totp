@@ -1,0 +1,45 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+    <IsPackable>true</IsPackable>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+
+    <!-- NuGet package metadata -->
+    <PackageId>SteamTotp</PackageId>
+    <Version>1.0.0</Version>
+    <Authors>SteamTotp</Authors>
+    <Company>SteamTotp</Company>
+    <Description>Generate Steam-style TOTP authentication codes. Supports Steam Guard codes, confirmation keys, device ID generation, and server time synchronization.</Description>
+    <Copyright>Copyright (c) 2025 SteamTotp</Copyright>
+    <PackageProjectUrl>https://github.com/candelacode/steam-totp</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/candelacode/steam-totp</RepositoryUrl>
+    <RepositoryType>git</RepositoryType>
+    <PackageTags>steam;totp;steam-guard;authenticator;2fa;steam-totp;steamguard</PackageTags>
+    <PackageLicenseExpression>MIT</PackageLicenseExpression>
+    <PackageReadmeFile>README.md</PackageReadmeFile>
+    <PackageReleaseNotes>Initial release with TOTP code generation, confirmation keys, device ID generation, and time offset sync.</PackageReleaseNotes>
+
+    <!-- SourceLink and symbol support for debugging -->
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <EmbedUntrackedSources>true</EmbedUntrackedSources>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <ContinuousIntegrationBuild>true</ContinuousIntegrationBuild>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="System.Memory" Version="4.5.5" />
+    <PackageReference Include="System.Text.Json" Version="4.7.2" />
+    <PackageReference Include="System.Threading.Tasks.Extensions" Version="4.5.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\README.md" Pack="true" PackagePath="\" />
+  </ItemGroup>
+
+</Project>
