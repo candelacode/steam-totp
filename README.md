@@ -140,53 +140,9 @@ The library follows SOLID principles with dependency injection support:
 dotnet test
 ```
 
-## Publishing to NuGet
-
-This project is configured to be published to [NuGet.org](https://www.nuget.org). The `.nupkg` and `.snupkg` (symbols) files are generated on build.
-
-### Manual publish
-
-```bash
-# Build and pack
-dotnet build -c Release
-dotnet pack -c Release -o ./nupkg
-
-# Publish to NuGet
-dotnet nuget push ./nupkg/*.nupkg --api-key YOUR_NUGET_API_KEY --source https://api.nuget.org/v3/index.json
-```
-
-### Automated via GitHub Actions
-
-Create a GitHub Actions workflow (`.github/workflows/publish.yml`) to publish automatically on tags:
-
-```yaml
-name: Publish to NuGet
-
-on:
-  push:
-    tags:
-      - 'v*'
-
-jobs:
-  publish:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-dotnet@v4
-        with:
-          dotnet-version: '10.0.x'
-      - run: dotnet build -c Release
-      - run: dotnet pack -c Release -o ./nupkg
-      - run: dotnet nuget push ./nupkg/*.nupkg --api-key ${{ secrets.NUGET_API_KEY }} --source https://api.nuget.org/v3/index.json
-```
-
-1. Get your NuGet API key from [nuget.org/account/apikeys](https://www.nuget.org/account/apikeys)
-2. Add it as a secret named `NUGET_API_KEY` in your GitHub repository settings
-3. Push a tag: `git tag v1.0.0 && git push origin v1.0.0`
-
 ## Requirements
 
-- .NET 10.0 SDK or later
+- .NET Standard 2.0 compatible runtime
 
 ## License
 
